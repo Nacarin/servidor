@@ -1,0 +1,33 @@
+<!--David Pozo Berlinches-->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Formulario</title>
+    </head>
+    <body>
+        <form method="post" action="recibir.php">
+            <label form="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre"><br>
+
+            <p>¿Eres trabajador o estudiante?</p>
+            <input type="radio" id="trabajador" name="opcion" value="trabajador">
+            <label for="trabajador">Trabajador</label><br>
+            <input type="radio" id="estudiante" name="opcion" value="estudiante">
+            <label for="estudiante">Estudiante</label><br>
+
+            <p>¿En que campos tienes competencias?</p>
+            <input type="checkbox" id="sql" name="programa[]">
+            <label for="sql">SQL</label><br>
+            <input type="checkbox" id="c" name="programa[]">
+            <label for="c">C</label><br>
+            <input type="checkbox" id="java" name="programa[]">
+            <label for="java">JAVA</label><br>
+
+            <p>¿Aceptas los terminos y condiciones de uso?</p>
+            <input type="checkbox" id="terminos" name="terminos">
+            <label for="terminos">Aceptar</label><br>
+            <input type="submit" value="Enviar" id="enviar">
+        </form>
+    </body>
+</html>

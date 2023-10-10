@@ -1,0 +1,72 @@
+<!--David Pozo Berlinches-->
+<!--1 type text,un boton enviar,1 radio con 2 opciones
+1 checkbox con una opcion y 1 checkbox con 3 opciones
+
+
+Si no marcamos los campos checkbox o radio no se envia nada y da error(no se crea el elemento) porque son "booleans"
+Podemos preguntar si existe o no existe
+-->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Formulario</title>
+    </head>
+    <body>
+        <form method="get" action="recibir.php">
+            <label form="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre"><br>
+
+            <p>¿Eres trabajador o estudiante?</p>
+            <input type="radio" id="trabajador" name="opcion" value="trabajador">
+            <label for="trabajador">Trabajador</label><br>
+            <input type="radio" id="estudiante" name="opcion" value="estudiante">
+            <label for="estudiante">Estudiante</label><br>
+
+            <p>¿En que campos tienes competencias?</p>
+            <input type="checkbox" value="sql" name="programa[]">
+            <label for="sql">SQL</label><br>
+            <input type="checkbox" value="c" name="programa[]">
+            <label for="c">C</label><br>
+            <input type="checkbox" value="java" name="programa[]">
+            <label for="java">JAVA</label><br>
+
+            <p>¿Aceptas los terminos y condiciones de uso?</p>
+            <input type="checkbox" id="terminos" name="terminos">
+            <label for="terminos">Aceptar</label><br>
+            <input type="submit" value="Enviar" id="enviar">
+        </form>
+    </body>
+</html>
+
+
+
+
+
+
+
+<!--
+
+    <!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Formulario</title>
+    </head>
+    <body>
+        <form>
+            <label form="nombre">Nombre:<input type="text" id="nombre"></label><br>          
+            <p>¿Eres trabajador o estudiante?</p>  
+            <label form="trabajador"><input type="radio" name="opcion" value="trabajador">Trabajador</label><br>
+            <label form="estudiante"><input type="radio" name="opcion" value="estudiante">Estudiante</label><br>
+            <p>¿En que campos tienes competencias?</p>          
+            <label form="sql"><input type="checkbox" id="sql" value="sql">SQL</label><br>          
+            <label form="c"><input type="checkbox" id="c" value="c">C</label><br>            
+            <label form="java"><input type="checkbox" id="java" value="java">JAVA</label><br>
+            <p>¿Aceptas los terminos y condiciones de uso?</p>           
+            <label form="terminos"><input type="checkbox" id="terminos" value="terminos">Aceptar</label><br>
+            <input type="submit" value="enviar" id="enviar">
+        </form>
+    </body>
+</html>
+-->
