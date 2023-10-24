@@ -56,9 +56,5 @@
                 return false; // Error al borrar el Jesuita
             }
         }
-
     }
 ?>
-
-
-
