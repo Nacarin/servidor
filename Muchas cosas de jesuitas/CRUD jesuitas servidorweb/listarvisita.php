@@ -16,7 +16,7 @@
         // Si la lista de visitas no está vacía, muestra una tabla con los datos
         echo '<h2>Lista de Visitas</h2>';
         echo '<table>';
-        echo '<tr><th>ID Visita</th><th>Puesto del Jesuita</th><th>Fecha</th></tr>';
+        echo '<tr><th>ID Visita</th><th>ID Jesuita</th><th>Fecha</th></tr>';
         foreach ($visitasLista as $visitaDatos) {
             // Itera a través de los datos de cada visita y muestra cada visita en una fila de la tabla
             echo '<tr>';

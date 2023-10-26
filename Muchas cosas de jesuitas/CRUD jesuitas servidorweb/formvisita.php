@@ -35,6 +35,7 @@
             echo "Error al borrar la Visita.";
         }
     }
+    
 
 ?>
 
@@ -42,7 +43,7 @@
 <html>
     <head>
         <title>CRUD de Visitas</title>
-        <link rel="stylesheet" type="text/css" href="estilos.css">
+        <link rel="stylesheet" type="text/css" href="./estilos/estilos.css">
     </head>
     <body>
         <h1>CRUD de Visitas</h1>       
@@ -59,6 +60,10 @@
             <label>ID Visita:</label>
             <input type="text" name="idVisita" required>
             <input type="submit" name="borrarVisita" value="Borrar Visita">
+        </form>
+        <h2>Listar Visitas</h2>
+        <form method="get" action="listarvisita.php">
+            <input type="submit" name="listarVisita" value="Listar Visita">
         </form>
         <h2>Volver al Índice</h2>
         <a href="index.html">Inicio</a>

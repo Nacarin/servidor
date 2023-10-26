@@ -18,7 +18,7 @@
         // Muestra un encabezado y crea una tabla para mostrar la lista de jesuitas
         echo '<h2>Lista de Jesuitas</h2>';
         echo '<table>';
-        echo '<tr><th>Puesto del Jesuita</th><th>Nombre</th><th>Firma</th></tr>';
+        echo '<tr><th>ID Jesuita</th><th>Nombre</th><th>Firma</th></tr>';
         
         // Itera a través de la lista de jesuitas y muestra cada uno en una fila de la tabla
         foreach ($jesuitasListar as $jesuitaDatos) {
