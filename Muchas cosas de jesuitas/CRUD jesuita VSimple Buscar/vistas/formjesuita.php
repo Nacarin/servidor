@@ -45,15 +45,22 @@
 
     }
 
-    // Procesar la solicitud para borrar un jesuita
-    if (isset($_GET['borrarJesuita'])) {
-        $idJesuita = $_GET['idJesuita'];
-
-        if ($jesuita->borrarJesuita($idJesuita)) {
-            echo "Jesuita borrado con éxito.";
+    //Buscar para borrarlo jesuita
+    if (isset($_GET['buscarJesuita'])) {
+        $idJesuitaBuscar = $_GET['idJesuitaBuscar'];
+        $jesuitaEncontrado = $jesuita->buscarJesuitaPorID($idJesuitaBuscar);
+    
+        // Agregar un enlace para borrar el Jesuita encontrado
+        if ($jesuitaEncontrado) {
+            echo '<h2>Resultado de la búsqueda</h2>';
+            echo '<p>Nombre: ' . $jesuitaEncontrado['nombre'] . '</p>';
+            echo '<p>Firma: ' . $jesuitaEncontrado['firma'] . '</p>';
+            // Agregar enlace a la página de modificación
+            echo '<a href="borrarjesuita.php?idJesuitaBorrar=' . $idJesuitaBuscar . '">Borrar Jesuita</a>';
         } else {
-            echo "Error al borrar el Jesuita.";
+            echo 'No se encontró un Jesuita con el ID proporcionado.';
         }
+
     }
 
 
@@ -82,11 +89,11 @@
             <input type="text" name="idJesuitaBuscar" required>
             <input type="submit" name="buscarJesuita" value="Buscar Jesuita">
         </form>     
-        <h2>Borrar Jesuita</h2>
-        <form method="get">
+        <h2>Borrar Jesuita por ID</h2>
+        <form method="get" action="borrarjesuita.php">
             <label>Puesto del Jesuita:</label>
             <input type="text" name="idJesuita" required>
-            <input type="submit" name="borrarJesuita" value="Borrar Jesuita">
+            <input type="submit" name="borrarJesuita" value="Buscar y Borrar Jesuita">
         </form>
         <h2>Volver al Índice</h2>
         <a href="../index.html">Inicio</a>

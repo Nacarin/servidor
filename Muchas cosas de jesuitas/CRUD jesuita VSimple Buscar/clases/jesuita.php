@@ -56,6 +56,19 @@
                 return false; // Error al borrar el Jesuita
             }
         }
+
+        //Si vamos a borrar un Jesuita primero miraremos  si tiene visitas asociadas
+        public function contarVisitasPorJesuita($idJesuita) {
+            $query = "SELECT COUNT(*) as total_visitas FROM visita WHERE idJesuita = $idJesuita";
+    
+            $result = $this->db->query($query);
+            if ($result) {
+                $row = $result->fetch_assoc();
+                return $row['total_visitas'];
+            } else {
+                return 0;
+            }
+        }
         
     }
 ?>

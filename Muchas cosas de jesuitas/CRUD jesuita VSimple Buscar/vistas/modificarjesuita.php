@@ -39,7 +39,7 @@
             <input type="text" name="nombre" value="<?php echo $jesuitaEncontrado['nombre']; ?>" required>
             <label>Nueva Firma:</label>
             <input type="text" name="firma" value="<?php echo $jesuitaEncontrado['firma']; ?>" required>
-            <input type="submit" name="modificarJesuita" value="Modificar Jesuita">
+        <!--    <input type="submit" name="modificarJesuita" value="Modificar Jesuita"> -->
         </form>
     </body> 
 </html>   
