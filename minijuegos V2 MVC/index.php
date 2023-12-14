@@ -1,10 +1,10 @@
 <?php 
-
-
     session_start();
 
-
     ini_set('display_errors', 1);
+
+    require_once getcwd() . 'config/serverconfig.php';
+
     // Si no hay controlador en la URL, se usa el controlador por defecto
     if (!isset($_GET["controlador"])) {
         $_GET["controlador"] = constant("DEFAULT_CONTROLLER");
@@ -29,9 +29,7 @@
     $nombre_controlador = $_GET["controlador"];
     $controlador = new $nombre_controlador();
 
-
     // Datos para las vistas
-
     $datos["datos"] = array();
     if (method_exists($controlador, $_GET["action"])) {
         $datos["datos"] = $controlador->{$_GET["action"]}();
